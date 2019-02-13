@@ -1,0 +1,126 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.title {
+    padding: 20px;
+    text-align: center;
+    font-size: 1.75em;
+}
+
+.mobile-title {
+    display: none;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.75em;
+}
+
+.menu {
+    text-align: center;
+}
+
+.box {
+    background-color: #D3D3D3;
+    margin: 15px;
+    border: 1px solid black;
+    display: inline-block;
+    box-sizing: border-box;
+    height: 150px;
+    overflow: hidden;
+}
+
+.box:hover {
+    overflow: auto;
+    cursor: col-resize;
+}
+
+.inner-box {
+    float: right;
+    min-width: 130px;
+    padding: 3px;
+    border: 1px solid black;
+    font-size: 1.25em;
+}
+
+.inner-mobile {
+    display: none;
+}
+
+.box:nth-child(1) .inner-box {
+    background-color: #dd8db4;
+}
+
+.box:nth-child(2) .inner-box {
+    background-color: #e55b75;
+    color: white;
+}
+
+.box:nth-child(3) .inner-box {
+    background-color: #eae398;
+}
+
+.box-text {
+    padding: 10px;
+    margin-top: 30px;
+    text-align: left;
+}
+
+@media (min-width: 992px) {
+    .box {
+       width: 28%; 
+    }
+}
+@media (min-width:768px) and (max-width: 991px) {
+    .box {
+        width: 44%; 
+    }
+
+    .box:nth-child(3) {
+        width: 93%;
+    }
+}
+@media (max-width:767px) {
+    .box {
+        width: 70%; 
+    }
+
+    .title {
+        display: none;
+    }
+    
+    .mobile-title {
+        display: block;
+        padding: 20px;
+        text-align: center;
+        font-size: 1.75em;
+    }
+
+    .inner-box {
+        display: none;
+    }
+
+    .box:nth-child(1) .inner-mobile {
+        display: block;
+        background-color: #dd8db4;
+        padding: 3px;
+        border: 1px solid black;
+        font-size: 1.25em;
+    }
+    
+    .box:nth-child(2) .inner-mobile {
+        display: block;
+        background-color: #e55b75;
+        color: white;
+        padding: 3px;
+        border: 1px solid black;
+        font-size: 1.25em;
+    }
+    
+    .box:nth-child(3) .inner-mobile {
+        display: block;
+        background-color: #eae398;
+        padding: 3px;
+        border: 1px solid black;
+        font-size: 1.25em;
+    }
+}
